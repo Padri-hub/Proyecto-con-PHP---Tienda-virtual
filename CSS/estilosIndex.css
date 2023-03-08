@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #14C38E;
+}
+
+/*------------------menu de navegacion---------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 9vh;
+    background-color: #00FFAB;
+    position: fixed;
+    opacity: 0.8;
+}
+
+nav div{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*botones*/
+.btnCarrito, .btnLogOut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 40px;
+    height: 75%;
+    width: 15%;
+    border: 1px solid black;
+}
+
+/*carrito de compra*/
+.btnCarrito{
+    background-color: rgba(255, 217, 0, 0.95);
+}
+
+.btnCarrito:hover{
+    background-color: rgba(255, 217, 0, 1);
+}
+
+/*titulo del cabecero*/
+.titulo2 {
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 4vw;
+    color: #E3FCBF;
+    text-shadow: 3px 2px black;
+    align-self: center;
+    text-decoration: none;
+}
+
+/*Desplegable con categorias*/
+.form {
+    height: 80%;
+    width: 25%;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #00FFAB;
+    border: none;
+    font-size: 2vw;
+
+}
+/*cada opcion del desplegable*/
+.form option {
+    text-align: start;
+}
+
+/*------------------------- items comprados en el carrito --------------------------------- */
+
+.items{
+    position: fixed;
+    top: 0;
+    left: 81%;
+    background-color:transparent;
+    z-index: 1;
+    color: tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 3px 2px black;
+    font-size: 25px;
+}
+
+/*saldo del usuario*/
+
+.saldo{
+    text-shadow: none;
+    color:rgb(39, 39, 39)
+}
+
+/*----------------------Cabecero-------------------------*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2015/05/23/16/15/planting-780736_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header div{
+    margin-top: 20vh;
+    margin-left: 2vw;
+    width: 30vw;
+}
+
+.titulo {
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+    color: #E3FCBF;
+    text-shadow: 4px 2px black;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2vw;
+    text-shadow: 3px 2px black;
+    color: wheat;
+}
+
+
+/*----------------Seccion de articulos------------------*/
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #B8F1B0;
+    height: auto;
+    width: 100%;
+}
+
+.cuadrado{
+    display: flex;
+    flex-direction: column;
+    background-color: #E3FCBF;
+    margin: 3vh 4vh;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 50vh;
+}
+
+.imagenes{
+    width: 15vw;
+    height: 30vh;
+}
+    
+.cuadrado p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin: 1vh auto;
+}
+
+.comprar {
+    min-width: 130px;
+    height: 40px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    box-shadow: 2px 2px 2px black, -2px -2px 3px black;
+    color: black;
+}
+.comprar:hover {
+box-shadow: inset 2px 2px 4px black, inset -2px -2px 3px black;
+/* background: #14C38E; */
+}
+
+.cuadrado form{
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cuadrado form select{
+ height: 50%;
+
+}
+
+
+/*------------------Footer---------------------*/
+
+footer {
+    background-color: #14C38E;
+    color: #fff;
+    text-align: right;
+    height: 20vh;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+.botones:hover{
+    background: rgba(255, 255, 255, 0.658);
+}
+
+
+
+/*------------------------ventana emergente-------------------------------------*/
+.emergente{
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+    width: 200px;
+    top: 11%;
+    left: 80%;
+    background-color: white;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.emergente span {
+    margin: auto;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: tomato;
+    text-shadow: 3px 2px black
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    margin: auto;
+    padding: 5px;
+
+}
+
+
+
+
+/*----------------ventana emergente saldo----------------*/
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Fijar la posición */
+    z-index: 1; /* Asegurarse de que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgb(0, 0, 0); /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.7); /* Transparencia */
+}
+
+.modal-content {
+    background-color: #14C38E;
+    opacity: 0.9;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin: 10% auto; /* Centrado en la página */
+    padding: 10px;
+    height: 350px;
+    border: 1px solid #B8F1B0;
+    width: 65%; /* Ancho ajustado */
+}
+
+
+  /* Estilo para cerrar el botón */
+.close {
+    color: red;
+    float: right;
+    border-radius: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    width: 50px;
+    margin-right: 30px;
+}
+
+.close:hover, .close:focus {
+        color: white;
+        background-color: red;
+        text-decoration: none;
+        cursor: pointer;
+}
+
+
+
+
+/* ventana emergente */
+.emergente{
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+    width: 200px;
+    top: 11%;
+    left: 80%;
+    background-color: #14C38E;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.emergente span {
+    margin: auto;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: wheat;
+    text-shadow: 3px 2px black
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    margin: auto;
+    padding: 5px;
+
+}

@@ -1,0 +1,137 @@
+/*
+--------------------Colores corporativos--------------------
+
+Principal #00FFAB
+Fondo #14C38E
+Botones #B8F1B0
+Texto(demomento) #E3FCBF
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80vh;
+}
+
+/*------------------Parte del login-----------------------*/
+
+
+
+#C-principal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.042);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#C-2{
+    background-color: #14C38E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #14C38E;
+    border: 3px solid #00FFAB;
+    width: 30vw;
+}
+
+#C-opciones{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 2em;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+}
+
+#formularios{
+    text-align: center;
+}
+
+#formularios input{
+    width: 20vw;
+    background-color: #14C38E;
+    border: 1px solid #00FFAB;
+    padding: 10px;
+    color: white;
+    border-radius: 13px;
+    margin-top: 1em;
+}
+
+/*Para que no se ponga la linea esa cuando hago click*/
+#formularios input[type="text"]:focus{
+    outline: none;
+}
+
+/*Que el color del input sea blanco*/
+::placeholder{
+    color: white;
+}
+
+.botones{
+    background-color: #14C38E;
+    border: 1px solid #00FFAB;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 2em auto;
+}
+
+.botones:hover{
+    background-color: #064331;
+}
+
+
+/*Parte del login-registro*/
+.registro, .login{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[name="form"]{
+    display: none;
+}
+
+/*------------registro checkeado--------------*/
+#registro:checked ~ * #F-registro{/*si el registor está checkeado enseño el formulario de registro*/
+    display: visible;
+}
+#registro:checked ~ * #F-login{/*y oculto el login*/
+    display: none;
+}
+
+#registro:checked ~ * .registro{
+    background-color: #064331;
+    color: white;
+}
+
+.registro:hover, .login:hover{
+    color: white;
+}
+
+
+/*-------------------login checkeado---------------------*/
+#login:checked ~ * #F-registro{/*aqui miro si esta checkeado el login, si asi es me */
+    display: none;
+}
+#login:checked ~ * .login{
+    background-color: #064331;
+    color: white;
+}
+
+
+/*-------------------------Cosas varias----------------------*/
+
+.errores{
+    color: white;
+}
